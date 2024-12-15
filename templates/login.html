@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Attack Me!</title>
-        <script type="text/javascript">
-            function validateCredentials(event) {
-                event.preventDefault();
-
-                var username = document.getElementsByName("Username")[0].value;
-                var password = document.getElementsByName("Password")[0].value;
-
-                var correctUsername = "ken";
-                var correctPassword = "123";
-                if (username === correctUsername && password === correctPassword) {
-                    window.location.href = "dashboard.html";
-                } else {
-                    alert("Invalid credentials. Please try again.");
-                }
-            }
-        </script>
+        <title>Login</title>
     </head>
-    <body bgcolor="white">
-        <form action="/form_login" method="post" onsubmit="validateCredentials(event)">
-            <h1></h1>Username:<br>
-            <input type="text" name="Username"><br>
-            <h1></h1>Password:<br>
-            <input type="password" name="Password"><br>
-            <br><input type="submit" value="Login">
+    <body>
+        <h1>Login Page</h1>
+        <form method="POST" action="/">  
+            Username: <input type="text" name="username" required><br>
+            Password: <input type="password" name="password" required><br>
+            <input type="submit" value="Login">
         </form>
     </body>
 </html>
